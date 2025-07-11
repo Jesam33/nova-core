@@ -45,10 +45,10 @@ export default function Cart() {
 
   return (
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8 p-4">
           <h1 className="text-3xl font-bold text-purple-900">Your Cart</h1>
           <Link href="/" className="text-purple-600 hover:text-purple-800 font-medium">
-            ← Continue Shopping
+            ← Go Back
           </Link>
         </div>
 

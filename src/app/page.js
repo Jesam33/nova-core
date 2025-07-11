@@ -142,9 +142,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="py-16 bg-white rounded-2xl  mb-16">
-          <div className="px-8 w-[80%] mx-auto">
-            <h2 className="text-5xl font-bold text-purple-900 mb-8 text-center">
+        <section id="about" className="py-16 bg-white rounded-2xl  mb-4">
+          <div className="px-8 md:w-[80%] mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-purple-900 mb-4 text-center">
               Meet the Master Baker
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -177,7 +177,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-8 rounded-2xl">
+              <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-4 md:p-8 rounded-2xl">
                 <h4 className="text-xl font-bold text-purple-900 mb-4">
                   Our Story
                 </h4>
