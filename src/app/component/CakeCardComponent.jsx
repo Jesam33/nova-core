@@ -17,6 +17,18 @@ const CakeCard = ({ cake }) => {
 
   const getCurrentPrice = () => {
     const sizeMultiplier = sizes.find(s => s.name === selectedSize)?.multiplier || 1
+    const basePrice = cake.basePrice * sizeMultiplier
+    
+    // Apply discount if cake has one
+    if (cake.discount && cake.discount > 0) {
+      return Math.round(basePrice * (1 - cake.discount))
+    }
+    
+    return Math.round(basePrice)
+  }
+
+  const getOriginalPrice = () => {
+    const sizeMultiplier = sizes.find(s => s.name === selectedSize)?.multiplier || 1
     return Math.round(cake.basePrice * sizeMultiplier)
   }
 
@@ -47,8 +59,24 @@ const CakeCard = ({ cake }) => {
           className="w-full h-48 object-cover"
         />
         <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-full text-sm font-semibold">
-          ${getCurrentPrice()}
+          {cake.discount ? (
+            <div className="flex items-center space-x-1">
+              <span className="line-through text-xs opacity-75">
+                ${getOriginalPrice()}
+              </span>
+              <span>${getCurrentPrice()}</span>
+            </div>
+          ) : (
+            <span>${getCurrentPrice()}</span>
+          )}
         </div>
+        
+        {/* Discount Badge */}
+        {cake.discount && (
+          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+            {Math.round(cake.discount * 100)}% OFF
+          </div>
+        )}
       </div>
       
       <div className="p-4">
@@ -103,6 +131,21 @@ const CakeCard = ({ cake }) => {
                 ))}
               </select>
             </div>
+
+            {/* Price Display in Customization */}
+            {cake.discount && (
+              <div className="text-center">
+                <span className="text-gray-500 line-through text-sm">
+                  ${getOriginalPrice()}
+                </span>
+                <span className="text-pink-600 font-bold text-lg ml-2">
+                  ${getCurrentPrice()}
+                </span>
+                <span className="text-green-600 font-semibold text-sm ml-2">
+                  Save ${getOriginalPrice() - getCurrentPrice()}!
+                </span>
+              </div>
+            )}
 
             {/* Action Buttons */}
             <div className="flex space-x-2">

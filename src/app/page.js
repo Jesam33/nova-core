@@ -13,6 +13,7 @@ const cakesData = [
     image:
       "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
     basePrice: 500,
+    discount: 0.20,
     flavours: ["Chocolate", "Double Chocolate", "Chocolate Mint"],
   },
   {
@@ -21,7 +22,8 @@ const cakesData = [
     description: "Classic vanilla sponge with buttercream frosting",
     image:
       "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=300&fit=crop",
-    basePrice: 600,
+    basePrice: 400,
+    discount: 0.20,
     flavours: ["Vanilla", "French Vanilla", "Vanilla Bean"],
   },
   {
@@ -30,7 +32,8 @@ const cakesData = [
     description: "Luxurious red velvet with cream cheese frosting",
     image:
       "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&h=300&fit=crop",
-    basePrice: 900,
+    basePrice: 200,
+    discount: 0.20,
     flavours: ["Red Velvet", "Red Velvet Cream", "Classic Red Velvet"],
   },
   {
@@ -39,7 +42,8 @@ const cakesData = [
     description: "Fresh lemon cake with tangy lemon glaze",
     image:
       "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&h=300&fit=crop",
-    basePrice: 800,
+    basePrice: 300,
+    discount: 0.20,
     flavours: ["Lemon", "Lemon Lime", "Lemon Poppy Seed"],
   },
   {
@@ -49,6 +53,7 @@ const cakesData = [
     image:
       "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&h=300&fit=crop",
     basePrice: 500,
+    discount: 0.20,
     flavours: ["Strawberry", "Strawberry Cream", "Wild Strawberry"],
   },
   {
@@ -58,6 +63,7 @@ const cakesData = [
     image:
       "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=300&fit=crop",
     basePrice: 300,
+    discount: 0.20,
     flavours: ["Carrot Spice", "Carrot Walnut", "Carrot Raisin"],
   },
 ];
