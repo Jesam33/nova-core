@@ -17,7 +17,7 @@ export const metadata = {
     description: "Where artistry meets flavor.",
     images: [
       {
-        url: "src/app/assets/images/b3.png",
+        url: "https://res.cloudinary.com/dijs29rd9/image/upload/v1752212810/b3_nqazuo.png",
         width: 1200,
         height: 630,
         alt: "Novacore Cake Showcase",
