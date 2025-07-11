@@ -6,10 +6,26 @@ import { CartProvider } from '@/app/context/context' // Adjust path if needed
 
 const geist = Geist({ subsets: ['latin'] })
 
+// app/page.tsx or app/layout.tsx
+
 export const metadata = {
-  title: 'Sweet Delights - Premium Cakes',
-  description: 'Order delicious custom cakes online',
-}
+  title: "Novacore Cakes - Premium Custom Cakes in Lagos",
+  description: "Order beautiful, handcrafted cakes for weddings, birthdays & events.",
+  keywords: ["cakes", "Lagos cakes", "custom cakes", "Novacore", "order cakes online"],
+  openGraph: {
+    title: "Novacore Cakes",
+    description: "Where artistry meets flavor.",
+    images: [
+      {
+        url: "src/app/assets/images/b3.png",
+        width: 1200,
+        height: 630,
+        alt: "Novacore Cake Showcase",
+      },
+    ],
+  },
+};
+
 
 export default function RootLayout({ children }) {
   return (
